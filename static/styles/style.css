@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Theme Colors ===== */
+.text-orange {
+  color: #78350f !important;
+}
+
+.btn-pumpkin {
+  background: linear-gradient(135deg, #44403c 0%, #78350f 50%, #a16207 100%);
+  border: none;
+  color: white;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(68, 64, 60, 0.3);
+}
+
+.btn-pumpkin:hover {
+  background: linear-gradient(135deg, #78350f 0%, #a16207 50%, #ca8a04 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(68, 64, 60, 0.4);
+}
+
+/* ===== Default Page Background (for other pages) ===== */
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: url("/static/images/pumpkin.png") no-repeat center center;
+  background-size: cover;
+}
+
+/* ===== Dark Overlay (default) ===== */
+.main-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: -1;
+}
+
+/* ===== Main Container ===== */
+.main-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+/* ================================================= */
+/* ===== SPECIAL FIX : Prediction Page No BG ===== */
+/* ================================================= */
+
+.no-bg-page {
+  background: linear-gradient(135deg, #fef6e4, #faf4ed) !important;
+  overflow-y: auto;
+}
+
+.no-bg-page .main-container::before {
+  display: none !important;
+}
+
+/* ===== Center Wrapper ===== */
+.result-wrapper {
+  width: 100%;
+  max-width: 1050px;
+  margin: auto;
+}
+
+/* ===== Glass Card ===== */
+.card {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 12px 30px rgba(68, 64, 60, 0.25) !important;
+  overflow: hidden;
+}
+
+/* ===== Card Body Spacing ===== */
+.card-body {
+  padding: 14px !important;
+}
+
+/* ===== Prediction Box ===== */
+.result-box {
+  border: 2px solid #a16207;
+  background: rgba(254, 246, 228, 0.95);
+  border-radius: 10px;
+  max-width: 380px;
+  margin: 0 auto 8px auto;
+}
+
+/* ===== Pie Chart ===== */
+.chart-container {
+  width: 200px;
+  height: 200px;
+  margin: 4px auto 6px auto;
+}
+
+canvas {
+  max-width: 100% !important;
+}
+
+/* ===== Measurement Cards ===== */
+.measurement-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #ca8a04;
+  border-radius: 8px;
+  padding: 7px;
+  font-size: 12px;
+  transition: 0.3s ease;
+}
+
+.measurement-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Text Spacing Fixes ===== */
+h2 {
+  margin-bottom: 6px !important;
+}
+
+h6 {
+  margin-bottom: 4px !important;
+}
+
+/* ===== Legend Horizontal ===== */
+.chartjs-legend ul {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  gap: 18px;
+  margin-top: 4px;
+}
+
+/* ===== Responsive Fix ===== */
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+  }
+
+  .main-container {
+    padding: 8px 0;
+  }
+
+  .card-body {
+    padding: 12px !important;
+  }
+
+  .chart-container {
+    width: 180px;
+    height: 180px;
+  }
+}

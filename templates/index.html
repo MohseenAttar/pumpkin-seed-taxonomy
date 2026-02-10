@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pumpkin Seed Variety Prediction</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* ===== Navbar ===== */
+      header {
+        background: linear-gradient(90deg, #292524, #78350f);
+        color: white;
+        padding: 14px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+        font-weight: 500;
+      }
+
+      /* ===== Hero Section ===== */
+      .hero {
+        flex: 1;
+        background: url("/static/images/pumpkin2.jpg") no-repeat center center;
+        background-size: cover;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 60px;
+      }
+
+      /* Subtle mocha overlay - minimal to show pumpkins clearly */
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(68, 64, 60, 0.15);
+      }
+
+      .hero-content {
+        position: relative;
+        max-width: 600px;
+        color: white;
+      }
+
+      .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+      }
+
+      .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+        line-height: 1.5;
+      }
+
+      .btn {
+        text-decoration: none;
+        background: linear-gradient(135deg, #44403c, #78350f);
+        color: white;
+        padding: 14px 32px;
+        border-radius: 30px;
+        font-weight: 600;
+        display: inline-block;
+      }
+
+      /* ===== Footer ===== */
+      footer {
+        background: linear-gradient(90deg, #78350f, #a16207);
+        color: white;
+        text-align: center;
+        padding: 12px;
+        font-size: 0.9rem;
+      }
+
+      /* ===== Responsive ===== */
+      @media (max-width: 768px) {
+        .hero {
+          padding: 40px 20px;
+          text-align: center;
+          justify-content: center;
+        }
+
+        .hero-content h1 {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <span>Pumpkin Seed AI</span>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/form">Prediction</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="hero-content">
+        <h1>Pumpkin Seed Variety Prediction</h1>
+        <p>AI-powered system to identify pumpkin seed varieties instantly</p>
+        <a href="/form" class="btn">Start Prediction</a>
+      </div>
+    </div>
+
+    <footer>Developed by Mohseen Attar © 2026</footer>
+  </body>
+</html>
